@@ -74,7 +74,7 @@ var firebaseConfig = {
                         alert("확인 버튼을 누르면 저장이 진행됩니다. 이후 자동으로 이동되며 창을 닫지 말아주세요.")
                         전송버튼.classList.add("hide")
                         setTimeout(function() {
-                            // location.href = "../../index.html";
+                            location.href = "../../index.html";
                         }, 5000); 
                     }
                 }

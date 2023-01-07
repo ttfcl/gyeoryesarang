@@ -34,12 +34,12 @@ const master = () => {
     gesipanTopmaker.textContent = questionList[questionList.length - masterKey].name
     gesipanToptime.textContent = questionList[questionList.length - masterKey].time
 
-    var 템플릿 = `문의날짜: ${questionList[questionList.length - masterKey].time}</br>
-    문의제목: ${questionList[questionList.length - masterKey].회사명}</br>
-    담당자 성함: ${questionList[questionList.length - masterKey].담당자}</br>
+    var 템플릿 = `서명날짜: ${questionList[questionList.length - masterKey].time}</br>
+    단체 및 소속: ${questionList[questionList.length - masterKey].회사명}</br>
+    성함: ${questionList[questionList.length - masterKey].담당자}</br>
     전화번호: ${questionList[questionList.length - masterKey].연락처}</br>
-    이메일: ${questionList[questionList.length - masterKey].이메일}</br>
-    문의내용: </br>${questionList[questionList.length - masterKey].content}</br>`
+    주소: ${questionList[questionList.length - masterKey].이메일}</br>
+    응원내용: </br>${questionList[questionList.length - masterKey].content}</br>`
     $(".gesipan_content").append(템플릿)
   }   
   render()
