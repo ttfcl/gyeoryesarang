@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>겨례사랑복지협의회 | 관리자모드</title>
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="../../style.css">
+		<link rel="stylesheet" href="style1.css">
+    <link rel="stylesheet" href="style2.css">
+    <link rel="shortcut icon" href="../../image/favicon.png">
+</head>
+<body>
+  <script>
+    if(!localStorage.getItem("master")) {
+      location.href = 'loginPage.html'
+    }
+  </script>
+	<div class="main_body">
+    <div class="top_body">
+      <div class="remocon">
+        <p><b>관리자모드</b></p>
+      </div>
+      <div class="body_title">
+        <h2><b>공지사항</b></h2>
+        <div>
+          <a href="newAdmin5.html"><button class="king">글쓰기</button></a>
+        </div>  
+      </div>
+    </div> 
+  </div>
+  <div class="remocon_mainContent">
+    <div class="remoconBody_r">
+      <a href="mainAdmin3.html"><div>문의사항조회</div></a>
+      <a href="mainAdmin5.html"><div>공지사항</div></a>
+      <a href="#"><div class="pointer">기록게시판</div></a>
+    </div>
+    <div class="mainContent">
+      <div class="gesipan">
+        <div class="gesipan_top">
+          <div class="gesipan_topindex">순번</div>
+          <div class="gesipan_toptitle">제목</div>
+          <div class="gesipan_topmaker">글쓴이</div>
+          <div class="gesipan_toptime">시간</div>
+        </div>
+        <a href="contentAdmin5.html"> 
+          <div class="gesipan_soket">
+          </div> 
+        </a>      
+      </div>
+      <div class="gesipan_page_r">
+        <button class="gesipan_page_button_p"> < </button>
+        <div class="gesipan_page">
+        </div>
+        <button class="gesipan_page_button_n"> > </button>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-app.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-auth.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-firestore.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-storage.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy" crossorigin="anonymous"></script>	
+  <script src="gesipanData6.js"></script>
+  <script src="gesipanfirebase6.js"></script>
+  <script src="gesipan6.js"></script>
+</body>
+<script type="text/javascript">
+	// F12키 금지
+	$(document).ready(function(){
+		$(document).on('keydown',function(e){
+			if ( e.keyCode == 123 || e.keyCode == 93) {  /* F12키 */
+        e.preventDefault();
+				e.returnValue = false;
+			}
+		});
+	});
+  $(document).ready(function(){
+		$(document).on('keydown',function(e){
+			if (e.keyCode == 93) {  /* F12키 */
+        alert("보안을 위해 개발자 모드를 금지시켰습니다.\n자세한 내용은 제작자에게 문의주세요.")
+        e.preventDefault();
+				e.returnValue = false;
+			}
+		});
+	});
+	// 마우스오른쪽 클릭방지
+	document.onmousedown=disableclick;
+	status="보안을 위해 개발자 모드를 금지시켰습니다.\n자세한 내용은 제작자에게 문의주세요.";
+	function disableclick(event){
+		if (event.button==2) {
+			alert(status);
+			return false;
+		}
+	}	
+</script>
+</html>

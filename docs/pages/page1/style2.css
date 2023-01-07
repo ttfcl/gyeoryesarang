@@ -1,0 +1,47 @@
+.bigtitle {
+    font-size: 48px;
+    text-align: center;
+}
+.smalltitle {
+    font-size: 32px;
+    text-align: center;
+    font-family: '고딕'
+}
+.content {
+    text-align: center;
+}
+.mainContent {
+    text-align: center;
+}
+.imageBox {
+    display: flex;
+}
+@media (max-width: 992px) {
+    .imageBox {
+        display: block;
+    }
+}
+.text-alignLeft {
+    text-align: left;
+}
+.text-alignRight {
+    text-align: right;
+}
+.gray {
+    color: gray;
+}
+.black {
+    color: black;
+}
+.mint {
+    color: rgb(50, 207, 207);
+}
+.red {
+    color: rgb(172, 0, 0);
+}
+.white {
+    color: white;
+}
+.purple {
+    color: rgb(192, 44, 125);
+}

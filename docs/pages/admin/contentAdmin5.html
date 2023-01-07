@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>겨례사랑복지협의회 | 관리자모드</title>
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="../../style.css">
+		<link rel="stylesheet" href="style1.css">
+    <link rel="shortcut icon" href="../../image/favicon.png">
+    <script src="//cdn.ckeditor.com/4.19.1/full/ckeditor.js"></script>
+</head>
+<body>
+  <script>
+    if(!localStorage.getItem("master")) {
+      location.href = 'loginPage.html'
+    }
+  </script>
+	<div class="main_body">
+    <div class="top_body">
+      <div class="remocon">
+        <p><b>관리자모드</b></p>
+      </div>
+      <div class="body_title">
+        <h2><b>수정모드</b></h2>
+        <div>
+          <a href="mainAdmin5.html"><button>취소</button></a>
+          <a href="#"><button id="end" data-bs-toggle="modal" data-bs-target="#staticBackdrop" class="king">수정</button></a>
+          <a href="#"><button data-bs-toggle="modal" data-bs-target="#staticBackdrop2" class="king2">삭제</button></a>
+        </div>  
+      </div>
+    </div> 
+  </div>
+  <div class="remocon_mainContent">
+    <div class="remoconBody_r">
+      <a href="mainAdmin5.html"><div class="pointer">관리자모드로 돌아가기</div></a>
+    </div>
+    <div class="mainContent">
+      <div class="gesipan_soket">
+        <input type="text" class="harfx2" placeholder="제목" id="title">
+        <input type="date" class="harf" placeholder="시간" id="time">
+        <input type="text" class="harf" placeholder="글쓴이" id="maker">
+        <p>아래 소스를 누른 후 아래의 소스코드를 붙여 넣어주세요</p>
+        <form>
+          <textarea name="editor1" id="editor1" rows="10" cols="80">
+          </textarea>
+          <script>
+              CKEDITOR.replace('editor1');
+          </script>
+        </form>
+        <p class="mt25">소스코드</p>
+        <div class="gesipan_content2"></div>
+        <p class="mt25">기존 이미지 목록</p>
+        <div class="gesipan_imgB"></div>
+        <p class="mt25">새로운 이미지 목록(기존 목록은 사라집니다.)</p>
+        <input type="file" id="disItem" multiple="ture" accept=".jpg, .jpeg, .png, .mp4, .wmv, .avi">
+        <p class="mt25">기존 다운로드 목록</p>
+        <div class="gesipan_downB"></div>
+        <p class="mt25">새로운 다운로드 목록(기존 목록은 사라집니다.)</p>
+        <input type="file" id="qwerasdf" multiple="ture">
+      </div>    
+    </div>
+  </div>
+  <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-body">
+          <p class="title_modal">제목, 날짜, 글쓴이 중 빈칸이 있습니다.</p>
+          <p class="happyend">약 30초 후 저장이 완료됩니다. 저장이 완료되면 자동으로 페이지 이동합니다. 창을 닫지 말아주세요.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary badend" data-bs-dismiss="modal">닫기</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" id="staticBackdrop2" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-body">
+          <p class='red'>게시글을 삭제합니다. 게시판은 "마도요 백업 서비스"에 의해 보호 받지 못하며 삭제 시 어떠한 방법으로도 복구 할 수 없습니다. 또한 제작자는 이에 책임을 지지 않습니다.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary badend" data-bs-dismiss="modal">닫기</button>
+          <button class="btn btn-danger" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal" id="del">위의 내용을 읽고 충분히 이해했습니다. 삭제를 진행합니다.</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" id="exampleModalToggle2"data-bs-backdrop="static" data-bs-keyboard="false" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-body">
+          삭제가 완료되었습니다.
+        </div>
+        <div class="modal-footer">
+          <a href="mainAdmin5.html" class="btn btn-primary"><button class="btn btn-primary" data-bs-target="#exampleModalToggle" data-bs-toggle="modal">닫기</button></a>
+        </div>
+      </div>
+    </div>
+  </div>
+	
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-app.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-auth.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-firestore.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-storage.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy" crossorigin="anonymous"></script>	
+  <script src="gesipanData5.js"></script>
+  <script src="ContentFix5.js"></script>
+</body>
+<script type="text/javascript">
+	// F12키 금지
+	$(document).ready(function(){
+		$(document).on('keydown',function(e){
+			if ( e.keyCode == 123 || e.keyCode == 93) {  /* F12키 */
+        e.preventDefault();
+				e.returnValue = false;
+			}
+		});
+	});
+  $(document).ready(function(){
+		$(document).on('keydown',function(e){
+			if (e.keyCode == 93) {  /* F12키 */
+        alert("보안을 위해 개발자 모드를 금지시켰습니다.\n자세한 내용은 제작자에게 문의주세요.")
+        e.preventDefault();
+				e.returnValue = false;
+			}
+		});
+	});
+	// 마우스오른쪽 클릭방지
+	document.onmousedown=disableclick;
+	status="보안을 위해 개발자 모드를 금지시켰습니다.\n자세한 내용은 제작자에게 문의주세요.";
+	function disableclick(event){
+		if (event.button==2) {
+			alert(status);
+			return false;
+		}
+	}	
+</script>
+</html>

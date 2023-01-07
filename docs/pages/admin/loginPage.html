@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>관리자 로그인 페이지</title>
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+		<link rel="stylesheet" href="style.css">
+		<link rel="shortcut icon" href="../../image/favicon.png">
+</head>
+<body>
+	<div class="box">
+  	<input id='id' type="text" placeholder="아이디를 입력하세요.">
+		<input id='pw' type="password" placeholder="비밀번호를 입력하세요.">
+		<p>비밀번호가 생각나지 않을 때는 제작자에게 문의해주세요.</p>
+		<button id="login" data-bs-toggle="modal" data-bs-target="#staticBackdrop">로그인 하기</button>
+	</div>
+
+
+  <script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-app.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-auth.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-firestore.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy" crossorigin="anonymous"></script>	
+	<script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-storage.js"></script>
+  <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-body">
+          <p class="title_modal hide">아이디 또는 비밀번호가 틀렸습니다.</p>
+          <p class="happyend hide">관리자 모드에 오신 것을 환영합니다.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary badend hide" data-bs-dismiss="modal">닫기</button>
+          <a href="mainAdmin3.html"><button type="button" class="btn btn-primary happyend2 hide" >로그인 진행</button></a>
+        </div>
+      </div>
+    </div>
+  </div>
+	<script src="login.js"></script>
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+</body>
+<script type="text/javascript">
+	// F12키 금지
+	$(document).ready(function(){
+		$(document).on('keydown',function(e){
+			if ( e.keyCode == 123 || e.keyCode == 93) {  /* F12키 */
+        e.preventDefault();
+				e.returnValue = false;
+			}
+		});
+	});
+	// 마우스오른쪽 클릭방지
+	document.onmousedown=disableclick;
+	status="보안을 위해 개발자 모드를 금지시켰습니다.\n자세한 내용은 제작자에게 문의주세요.";
+	function disableclick(event){
+		if (event.button==2) {
+			alert(status);
+			return false;
+		}
+	}	
+</script>
+</html>
