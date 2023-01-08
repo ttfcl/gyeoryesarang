@@ -24,7 +24,7 @@
   const storage = firebase.storage();
   const db = firebase.firestore();
 
-  db.collection('product2').get().then((결과)=>{
+  db.collection('product3').get().then((결과)=>{
     결과.forEach((doc)=>{
       gonjiList.unshift(doc.data())
     })
@@ -118,7 +118,7 @@
     'down' : downlink,
     'index' : index
   }
-    db.collection('product2').doc(directer).set(save)
+    db.collection('product3').doc(directer).set(save)
     console.log('2131232')
     setTimeout(function() {
       location.href = "mainAdmin5.html"

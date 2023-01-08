@@ -39,6 +39,8 @@ const master = () => {
     성함: ${questionList[questionList.length - masterKey].담당자}</br>
     전화번호: ${questionList[questionList.length - masterKey].연락처}</br>
     주소: ${questionList[questionList.length - masterKey].이메일}</br>
+    이메일: ${questionList[questionList.length - masterKey].이메일2}</br>
+    생일: ${questionList[questionList.length - masterKey].생일}</br>
     응원내용: </br>${questionList[questionList.length - masterKey].content}</br>`
     $(".gesipan_content").append(템플릿)
   }   

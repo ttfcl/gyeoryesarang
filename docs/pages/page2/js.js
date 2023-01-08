@@ -4,6 +4,8 @@ const 연락처 = document.querySelector("#연락처")
 const 이메일 = document.querySelector("#이메일")
 const 문의내용 = document.querySelector("#문의내용")
 const 전송버튼 = document.querySelector("#전송버튼")
+const 생일 = document.querySelector("#생일")
+const 이메일2 = document.querySelector("#이메일2")
 
 let gonjiList = []
 let countList = []
@@ -56,7 +58,9 @@ var firebaseConfig = {
                             "이메일" : 이메일.value,
                             "content" : 문의내용.value,
                             "time" : time,
-                            "index" : index
+                            "index" : index,
+                            "생일" : 생일.value,
+                            "이메일2" : 이메일2.value
                         }
                         let NumberCount = 0
                         db.collection('count').get('count').then((결과)=>{
