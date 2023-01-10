@@ -172,12 +172,10 @@ a:hover {
 .section3LeftBox {
     width: 100%; 
     max-width: 600px;
-    min-width: 300px;
 }
 .section3RightBox {
     width: 100%;
     max-width: 600px;
-    min-width: 300px;
     padding-left: 10px;
 }
 .section3RightBoxContent {
