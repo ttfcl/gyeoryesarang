@@ -346,10 +346,13 @@ a:hover {
         margin-left: auto;
         margin-right: auto;
     }
+}
+@media (max-width: 1000px) {
     .section2Content {
-        width: 90%;
+        width: 100%;
     }
 }
+
 /*섹션 2-----------------*/
 
 

@@ -193,6 +193,15 @@ a:hover {
     border: 1px solid #ff9a02f1;
     padding-left: 5px;
 }
+@media (max-width: 992px) {
+    .section3RightBoxContent > input {
+        height: 100px;
+        font-size: 24px;
+    }
+    .section3 {
+        width: 100%;
+    }
+}
 .red {
     color: red;
 }
@@ -220,10 +229,13 @@ a:hover {
 }
 @media (max-width: 992px) {
     .section3RightBox {
-        width: 80%;
+        width: 100%;
     }
     .section3LeftBox {
         margin-top: 50px;
+    }
+    .section3RightBoxContent > p {
+        font-size: 24px;
     }
 }
 .hide {
