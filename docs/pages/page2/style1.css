@@ -169,6 +169,11 @@ a:hover {
     justify-content: space-around;
     flex-wrap: wrap-reverse;
 }
+@media (max-width: 1550px) {
+    .section3LeftBox > img {
+        margin-top: 50px;
+    }
+}
 .section3LeftBox {
     width: 100%; 
     max-width: 600px;
@@ -225,6 +230,21 @@ a:hover {
     color: white;
     background-color: #ff9a02f1;
 }
+#masterControll {
+    color: white;
+    background-color: black;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-radius: 10rem;
+    border: 1px solid black;
+    width: fit-content;
+}
+#masterControll:hover {
+    color: black;
+    background-color: white;
+}
 @media (max-width: 992px) {
     .section3RightBox {
         width: 100%;
@@ -232,10 +252,11 @@ a:hover {
     .section3LeftBox {
         margin-top: 50px;
     }
-    .section3RightBoxContent > p {
+    .section3RightBoxContent > p, #masterControll {
         font-size: 24px;
-    }
+    } 
 }
+
 .hide {
     display: none;
 }
