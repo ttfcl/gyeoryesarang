@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="popup1.css">
+</head>
+<body>
+    <img src="../image/포스터-f2.png" width="100%">
+    <div class="menu">
+        <button id="dayClose">하루동안 보지않기</button>
+        <button id="close">닫기</button>
+    </div>
+    <script src="popup1.js"></script>
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  </body>
+  <script type="text/javascript">
+	  // F12키 금지
+	  $(document).ready(function(){
+		  $(document).on('keydown',function(e){
+			  if ( e.keyCode == 123 || e.keyCode == 93) {  /* F12키 */
+		  e.preventDefault();
+				  e.returnValue = false;
+			  }
+		  });
+	  });
+	  // 마우스오른쪽 클릭방지
+	  document.onmousedown=disableclick;
+	  status="보안을 위해 개발자 모드를 금지시켰습니다.\n자세한 내용은 제작자에게 문의주세요.";
+	  function disableclick(event){
+		  if (event.button==2) {
+			  alert(status);
+			  return false;
+		  }
+	  }	
+  </script>
+  </html>
